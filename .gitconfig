@@ -1,0 +1,79 @@
+# [user]
+# 	name = github-wn-minimac
+# 	email = reality_learner.0y@icloud.com
+
+# [includeIf "gitdir:~/Repos/Work/"]
+#   path = ~/.config/.gitconfig_wn
+
+# [includeIf "gitdir:~/.config/nvim"]
+#   path = ~/.config/.gitconfig_neuvim
+
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+
+[pull]
+	rebase = false
+	merge = ff
+[push]
+	default = simple
+
+[color]
+	ui = true
+	branch = auto
+	interactive = auto
+	diff = auto
+	status = auto
+	pager = true
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow
+	commit = green
+	frag = magenta
+	old = red
+	new = green
+	whitespace = red reverse
+
+[init]
+	defaultBranch = main
+
+[fetch]
+	prune = true
+
+[merge]
+	log = true	
+	tool = kdiff3
+
+[diff]
+	colorMoved = zebra
+
+[alias]
+	cp = cherry pick
+	last = log -1 HEAD --stat
+	ls = ls-files
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	ll = log --oneline
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+
+	# Show files ignored by git:
+	ign = ls-files -o -i --exclude-standard
+
+	# Display all the consul list
+	cl = config --list
+
+	# Display all the git aliases
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+[user]
+	name = Scott Mackey
+	email = me@dev.engineer
