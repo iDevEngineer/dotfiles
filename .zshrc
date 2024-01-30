@@ -4,7 +4,6 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export MY_HOME="$HOME/.local/bin"
 export EDITOR="nvim"
 export ANSIBLE_INVENTORY="$HOME/.ansible/de-inventory"
-export OPENAI_API_KEY="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"
 
 # Always append or prepend new paths to $PATH variable in your config file. Example: /etc/paths adds MacOS default paths
 export PATH=$HOMEBREW:$PNPM_HOME:$MY_HOME:$PATH
@@ -36,7 +35,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "esc/conda-zsh-completion"
 plug "wintermi/zsh-fnm"
 plug "zap-zsh/vim"
-plug "zap-zsh/exa"
 plug "wintermi/zsh-brew"
 
 # Start Neofetch
