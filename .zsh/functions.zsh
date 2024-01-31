@@ -26,14 +26,21 @@ sshg () {
 sshl () {
   for key in ~/.ssh/id_*; do ssh-keygen -l -f "${key}"; done | uniq
 }
-chsh () {
-  alias chsh="sudo chsh -s $(which zsh) $USER"
-}
 sshls () {
   ssh-add -l
 }
 sshpth () {
   git config --get remote.origin.url
+}
+chshell () {
+  sudo chsh -s $(which $1) $USER
+}
+# print path on each line function for zsh
+printpaths () {
+  echo $PATH | sed "s/:/\n/g" | sort | uniq -c
+}
+killp () {
+  kill -9 $argv
 }
 # backup file
 bak() {

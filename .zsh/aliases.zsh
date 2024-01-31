@@ -1,21 +1,20 @@
 # ----------------------
-
+# Misc basic aliases
 # ----------------------
 alias c="clear"
 alias ..="cd .."
 alias ...="cd ~"
-
-# Changing "ls" to "exa"
-alias ls='eza -al --color=always --group-directories-first' # my preferred listing
-alias la='eza -a --color=always --group-directories-first'  # all files and dirs
-alias ll='eza -l --color=always --group-directories-first'  # long format
-alias lt='eza -aT --color=always --group-directories-first' # tree listing
-alias l.='eza -a | egrep "^\."'
-
 alias o="open ."
 alias s="ssh"
 alias grep="grep --color"
 alias x="exit"
+
+# Changing "ls" to "lsd"
+alias ls='lsd -al --color=always --group-directories-first' # my preferred listing
+alias la='lsd -a --color=always --group-directories-first' # all files and dirs
+alias ll='lsd -l --color=always --group-directories-first' # long format
+alias lt='lsd -aT --color=always --group-directories-first' # tree listing
+alias l.='lsd -a | egrep "^\."'
 
 # confirm before overwriting something
 alias mv="mv -iv"
@@ -80,46 +79,3 @@ alias ta="t a -t" # attach to session
 alias tls="t ls" # list sessions
 alias tn="t new -s primary" # new session named primary
 alias tks="t kill-session -t" # kill session by name
-
-# GIT shortcuts
-# g () {
-#   git status
-# }
-# gs () {
-#   git status -sbu
-# }
-# gull () {
-#   git pull
-# }
-# gush () {
-#   git push
-# }
-# gb () {
-#   git checkout -b $1
-# }
-# gc () {
-#   git commit -am $1
-# }
-# gch () {
-#   git checkout $1
-# }
-# glean () {
-#   git clean -df
-# }
-# gmain () {
-#   git checkout main
-# }
-# ghard () {
-#   git reset --hard
-# }
-# grevert () {
-#   branch=$(git branch | grep \* | cut -d " " -f2);
-#   git reset --hard origin/$branch
-# }
-# gstream () {
-#   branch=$(git branch | grep \* | cut -d " " -f2);
-#   git push --set-upstream origin $branch
-# }
-# glg () {
-# 	git log --graph --oneline --decorate --all
-# }
