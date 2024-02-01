@@ -1,10 +1,24 @@
-# name: Scott Mackey
-# license: MIT
-# upstream: https://scottmackey.uk
-
 [colors]
-ansi = [ "#121212", "#2b4fff", "#28b9ff", "#7129ff", "#2883ff", "#a52aff", "#f1f1f1", "#3d2aff" ]
-brights = [ "#666666", "#5c78ff", "#5ac8ff", "#905aff", "#5ea2ff", "#ba5aff", "#ffffff", "#657b83" ]
+ansi = [
+    "#121212",
+    "#2b4fff",
+    "#28b9ff",
+    "#7129ff",
+    "#2883ff",
+    "#a52aff",
+    "#f1f1f1",
+    "#3d2aff",
+]
+brights = [
+    "#666666",
+    "#5c78ff",
+    "#5ac8ff",
+    "#905aff",
+    "#5ea2ff",
+    "#ba5aff",
+    "#ffffff",
+    "#657b83",
+]
 
 background = "#121212"
 foreground = "#f1f1f1"
@@ -64,8 +78,3 @@ intensity = "Normal"
 italic = true
 strikethrough = false
 underline = "None"
-
-[metadata]
-name = "Scott Mackey"
-origin_url = "https://github.com/idevengineer"
-wezterm_version = "Always"
