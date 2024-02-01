@@ -34,7 +34,7 @@ plug "wintermi/zsh-brew"
 eval "$(zoxide init zsh)"
 
 # fnm required
-# eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd)"
 
 # Start starship
 eval "$(starship init zsh)"
