@@ -47,8 +47,8 @@ if [[ $OSTYPE == darwin* ]]; then
   alias flush="dscacheutil -flushcache"
 fi
 # open ~/.zshrc in using the default editor specified in $EDITOR
-# alias esh="$EDITOR ~/.zshrc"
-# alias eal="$EDITOR ~/.config/.custom_aliases"
+alias esh="$EDITOR ~/.zshrc"
+alias eal="$EDITOR ~/.config/.custom_aliases"
 alias sc="source $HOME/.zshrc"
 # Repo for dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # git config
