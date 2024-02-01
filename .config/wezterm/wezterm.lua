@@ -16,7 +16,7 @@ return {
 	color_scheme = "scottmackey",
 	default_cursor_style = "BlinkingBlock",
 	cursor_thickness = 14.0,
-	cursor_blink_rate = 800,
+	-- cursor_blink_rate = 800,
 	hide_mouse_cursor_when_typing = true,
 	enable_scroll_bar = false,
 	window_decorations = "RESIZE",
@@ -29,7 +29,7 @@ return {
 		top = 10,
 		bottom = 0,
 	},
-	window_background_image = "/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg",
+	-- window_background_image = "/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg",
 	window_background_image_hsb = {
 		hue = 1.0,
 		saturation = 1.0,
