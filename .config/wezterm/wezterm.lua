@@ -1,32 +1,44 @@
-local wezterm = require("wezterm")
+local wezterm = require 'wezterm'
+local mux = wezterm.mux
+local act = wezterm.action
+
+-- This table will hold the configuration.
+local config = {}
+
+if wezterm.config_builder then
+	config = wezterm.config_builder()
+end
 
 return {
 	font = wezterm.font("VictorMono Nerd Font", { weight = "Regular" }),
 	font_size = 17.0,
-	color_scheme = "tokyonight_night",
+	line_height = 1.2,
+	color_scheme = "scottmackey",
 	default_cursor_style = "BlinkingBlock",
 	cursor_thickness = 14.0,
 	cursor_blink_rate = 800,
 	hide_mouse_cursor_when_typing = true,
 	enable_scroll_bar = false,
-	tab_bar_at_bottom = true,
 	window_decorations = "RESIZE",
 	window_frame = {
 		font_size = 14.0,
 	},
 	window_padding = {
-		left = 0,
-		right = 0,
-		top = 0,
+		left = 10,
+		right = 10,
+		top = 10,
 		bottom = 0,
 	},
-	hide_tab_bar_if_only_one_tab = true,
-	window_background_image = "/Users/aigen/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/darkumberalla.jpg",
+	window_background_image = "/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg",
 	window_background_image_hsb = {
 		hue = 1.0,
 		saturation = 1.0,
 		brightness = 0.3,
 	},
+	window_background_opacity = 0.95,
+	hide_tab_bar_if_only_one_tab = true,
+	use_fancy_tab_bar = false,
+	tab_bar_at_bottom = true,
 	-- keys = {
 	-- 	{ key = "l", mods = "CTRL", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 	-- 	{ key = "h", mods = "CTRL", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },

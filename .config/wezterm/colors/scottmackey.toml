@@ -1,0 +1,71 @@
+# name: Scott Mackey
+# license: MIT
+# upstream: https://scottmackey.uk
+
+[colors]
+ansi = [ "#121212", "#2b4fff", "#28b9ff", "#7129ff", "#2883ff", "#a52aff", "#f1f1f1", "#3d2aff" ]
+brights = [ "#666666", "#5c78ff", "#5ac8ff", "#905aff", "#5ea2ff", "#ba5aff", "#ffffff", "#657b83" ]
+
+background = "#121212"
+foreground = "#f1f1f1"
+
+compose_cursor = '#7129ff'
+cursor_bg = "#f1f1f1"
+cursor_border = "#f1f1f1"
+cursor_fg = "#f1f1f1"
+
+selection_bg = "#905aff"
+selection_fg = "#f1f1f1"
+
+scrollbar_thumb = '#3f3951'
+split = '#938aad'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = "#282433"
+
+[colors.tab_bar.active_tab]
+bg_color = "#282433"
+fg_color = "#a52aff"
+intensity = "Normal"
+underline = "None"
+italic = false
+strikethrough = false
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#282433"
+fg_color = "#938aad"
+intensity = "Normal"
+italic = false
+strikethrough = false
+underline = "None"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#a52aff"
+fg_color = "#eee9fc"
+intensity = "Normal"
+italic = false
+strikethrough = false
+underline = "None"
+
+[colors.tab_bar.new_tab]
+bg_color = "#282433"
+fg_color = "#938aad"
+intensity = "Normal"
+italic = false
+strikethrough = false
+underline = "None"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#a52aff"
+fg_color = "#eee9fc"
+intensity = "Normal"
+italic = true
+strikethrough = false
+underline = "None"
+
+[metadata]
+name = "Scott Mackey"
+origin_url = "https://github.com/idevengineer"
+wezterm_version = "Always"
