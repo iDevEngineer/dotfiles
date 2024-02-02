@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local act = wezterm.action
 
-local dimmer = { brightness = 0.1 }
+local dimmer = { brightness = 0.1, hue = 0.6, saturation = 0.7 }
 
 -- This table will hold the configuration.
 local config = {}
@@ -11,8 +11,8 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.font = wezterm.font('VictorMono Nerd Font', { weight = 'Regular' })
-config.font_size = 17.0
+config.font = wezterm.font('VictorMono Nerd Font', { weight = 'Bold' })
+config.font_size = 16.0
 config.line_height = 1.2
 config.default_cursor_style = 'BlinkingBlock'
 config.cursor_thickness = 14.0
@@ -29,20 +29,13 @@ config.window_padding = {
   top = 10,
   bottom = 0,
 }
-config.window_background_image_hsb = {
-  hue = 1.0,
-  saturation = 1.0,
-  brightness = 0.3,
-}
+
 config.window_background_opacity = 0.95
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
--- config.window_background_image = '/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg'
-
 config.background = {
-  -- This is the deepest/back-most layer. It will be rendered first
   {
     source = {
       File = '/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg',
