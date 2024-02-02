@@ -2,6 +2,8 @@ local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local act = wezterm.action
 
+local dimmer = { brightness = 0.1 }
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -37,7 +39,23 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
-config.window_background_image = '/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg'
+-- config.window_background_image = '/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg'
+
+config.background = {
+  -- This is the deepest/back-most layer. It will be rendered first
+  {
+    source = {
+      File = '/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Wallpaper/apple-wonderlust-2880x1800.jpg',
+    },
+    width = '100%',
+    height = 'Contain',
+    horizontal_align = 'Right',
+    vertical_align = 'Top',
+    repeat_x = 'NoRepeat',
+    repeat_y = 'NoRepeat',
+    hsb = dimmer,
+  },
+}
 
 -- config.color_scheme_dirs = { '~/.config/wezterm/colors' }
 config.color_scheme = 'scottmackey'
