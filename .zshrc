@@ -1,3 +1,5 @@
+eval $(/opt/homebrew/bin/brew shellenv)
+
 # Use my custom aliases file
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 [ -f "$HOME/.zsh/aliases.zsh" ] && source "$HOME/.zsh/aliases.zsh"
