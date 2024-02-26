@@ -12,8 +12,14 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # fi
 
 # Start ZSH automatically
-if [[ -z "$SSH_AUTH_SOCK" ]]; then
-  eval "$(ssh-agent -s)"
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+    eval $(ssh-agent)
+    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+    ssh-add ~/.ssh/$PRIVATE_KEY
+fi
+
+if [ -f ~/.ssh/ssh_auth_sock ]; then
+    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 fi
 
 # Example install plugins
