@@ -6,11 +6,6 @@ eval $(/opt/homebrew/bin/brew shellenv)
 [ -f "$HOME/.zsh/functions.zsh" ] && source "$HOME/.zsh/functions.zsh"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 
-# Start TMUX automatically
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   tmux a -t default || exec tmux new -s default && exit;
-# fi
-
 # Start ZSH automatically
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
     eval $(ssh-agent)
@@ -43,6 +38,9 @@ eval "$(zoxide init zsh)"
 
 # fnm required
 eval "$(fnm env --use-on-cd)"
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
 
 # Start starship
 eval "$(starship init zsh)"
